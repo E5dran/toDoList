@@ -1,7 +1,11 @@
-header {
+.filtro {
     height: 50px;
 }
 
-.filtro {
-    height: 50px;
+.form-control {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
 }
