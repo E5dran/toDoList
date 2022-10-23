@@ -6,10 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
+    <header>
+        <div class="form-control d-inline">
+            <input type="text" id="inputTarea" placeholder="Introduce una tarea">
+        </div>
+        <div class="form-control d-inline">
+            <select id="selectPrioridad">
+                <option value="" disabled selected hidden>Selecciona una prioridad</option>
+                <option value="hi">Muy importante</option>
+                <option value="me">Importante</option>
+                <option value="lo">Poco importante</option>
+            </select>
+        </div>
+        <input class="d-inline" type="submit" value="GUARDAR">
+    </header>
+
+    <div class="filtro bg-black">
+        <div class="form-control d-inline">
+            <select id="selectPrioridadFilter">
+                <option value="" disabled selected hidden>Selecciona una prioridad</option>
+                <option value="hi">Muy importante</option>
+                <option value="me">Importante</option>
+                <option value="lo">Poco importante</option>
+            </select>
+        </div>
+
+        <div class="form-control d-inline">
+            <input type="text" id="inputTarea" placeholder="Tarea a buscar">
+        </div>
+    </div>
+
+    <main>
+        <ul id="listaDeTareas"></ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
 </body>
 
