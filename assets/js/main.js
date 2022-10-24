@@ -13,7 +13,8 @@ pintarLista();
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
     const dato = {
-        tarea: inputTarea.value,
+        /* idTarea, */
+        titulo: inputTarea.value,
         prioridad: selectPrioridad.value
     }
     tareas.push(dato);
@@ -28,7 +29,7 @@ function pintarLista() {
     listaTareas.innerHTML = '';
     for (let i = 0; i < tareas.length; i++) {
         const li = document.createElement('li');
-        li.innerText = tareas[i].tarea;
+        li.innerText = tareas[i].titulo;
 
         const btnEliminar = document.createElement('button');
         btnEliminar.innerText = 'Eliminar';
