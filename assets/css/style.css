@@ -9,3 +9,15 @@
 ul {
     list-style: none;
 }
+
+.urgente {
+    background-color: red;
+}
+
+.diaria {
+    background-color: #6030ff;
+}
+
+.mensual {
+    background-color: lightgreen;
+}
