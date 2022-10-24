@@ -12,49 +12,50 @@
 </head>
 
 <body>
-    <form action="" method="" id="formulario">
+    <div class="container border border-1 border-dark bg-black ">
+        <form class=" p-4 bg-light" action="" method="" id="formulario">
+            <div class="form-control d-inline border-0">
+                <input type="text" id="inputTarea" placeholder="Introduce una tarea">
+            </div>
 
-        <div class="form-control d-inline">
-            <input type="text" id="inputTarea" placeholder="Introduce una tarea">
+            <div class="form-control d-inline border-0">
+                <select id="selectPrioridad">
+                    <option value="" disabled selected hidden>Selecciona una prioridad</option>
+                    <option value="hi">URGENTE</option>
+                    <option value="me">Diaria</option>
+                    <option value="lo">Mensual</option>
+                </select>
+            </div>
+
+            <input class="d-inline" type="submit" value="GUARDAR">
+
+        </form>
+
+        <div class="filtro p-5 ">
+            <div class="form-control d-inline bg-black border-0">
+                <select id="selectPrioridadFilter">
+                    <option value="all">Selecciona una prioridad</option>
+                    <option value="hi">URGENTE</option>
+                    <option value="me">Diaria</option>
+                    <option value="lo">Mensual</option>
+                </select>
+            </div>
+
+            <div class="form-control d-inline bg-black border-0">
+                <input type="text" id="inputTareaFilter" placeholder="Tarea a buscar">
+            </div>
+
+            <button class="rounded " id="btnLimpiar">Limpiar filtros</button>
         </div>
 
-        <div class="form-control d-inline">
-            <select id="selectPrioridad">
-                <option value="" disabled selected hidden>Selecciona una prioridad</option>
-                <option value="hi">URGENTE</option>
-                <option value="me">Diaria</option>
-                <option value="lo">Mensual</option>
-            </select>
-        </div>
+        <main class="row">
+            <ul id="listaTareas"></ul>
+        </main>
 
-        <input class="d-inline" type="submit" value="GUARDAR">
-
-    </form>
-
-    <div class="filtro bg-black">
-        <div class="form-control d-inline">
-            <select id="selectPrioridadFilter">
-                <option value="all">Selecciona una prioridad</option>
-                <option value="hi">URGENTE</option>
-                <option value="me">Diaria</option>
-                <option value="lo">Mensual</option>
-            </select>
-        </div>
-
-        <div class="form-control d-inline">
-            <input type="text" id="inputTareaFilter" placeholder="Tarea a buscar">
-        </div>
-
-        <button id="btnLimpiar">Limpiar filtros</button>
+        <footer>
+            <p class="color">APP To Do's Andres</p>
+        </footer>
     </div>
-
-    <main>
-        <ul id="listaTareas"></ul>
-    </main>
-
-    <footer>
-        <p>APP To Do's Andres</p>
-    </footer>
 
     <script src="./assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

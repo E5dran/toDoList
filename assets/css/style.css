@@ -2,22 +2,37 @@
     height: 50px;
 }
 
-.form-control {
+/* .form-control {
     display: inline-block;
-}
+} */
 
 ul {
     list-style: none;
 }
 
-.urgente {
+.hi {
     background-color: red;
 }
 
-.diaria {
+.me {
     background-color: #6030ff;
 }
 
-.mensual {
+.lo {
     background-color: lightgreen;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    padding: 15px;
+    font-size: x-large;
+}
+
+.filtro {
+    width: 100%;
+}
+
+li {
+    height: 48px;
 }

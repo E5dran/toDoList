@@ -55,17 +55,22 @@ function pintarLista(tareas) {
     listaTareas.innerHTML = '';
     for (let i = 0; i < tareas.length; i++) {
         const li = document.createElement('li');
-        li.innerText = tareas[i].titulo;
+        const div = document.createElement('div');
+        div.innerText = tareas[i].titulo;
+        div.classList.add("col-10")
+        li.classList.add(tareas[i].prioridad);
+        li.classList.add("p-2", "row", "border", "border-dark", "border-1");
 
         const btnEliminar = document.createElement('button');
         btnEliminar.innerText = 'Eliminar';
+        btnEliminar.classList.add("col-2", "rounded");
         btnEliminar.addEventListener('click', (event) => {
             event.target.parentNode.remove();
             tareas.splice(i, 1);
             localStorage.setItem('listTareas', JSON.stringify(tareas));
         });
 
-        li.append(btnEliminar);
+        li.append(div, btnEliminar);
         listaTareas.append(li);
     }
 }
